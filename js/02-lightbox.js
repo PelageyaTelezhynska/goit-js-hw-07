@@ -23,11 +23,10 @@ function onGalleryClick(event) {
   event.preventDefault();
   if (!event.target.classList.contains('gallery__image')) return;
 
-  const gallerySimplebox = new SimpleLightbox('.gallery a');
-  gallerySimplebox.on('show.simplelightbox', function () {
-    captionsData: 'alt';
-    captionPosition: 'bottom';
-    captionDelay: 250;
+  const gallerySimplebox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
   });
 }
 
