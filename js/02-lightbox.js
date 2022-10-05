@@ -4,8 +4,7 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const refs = {
-  gallery: document.querySelector('.gallery'),
-  item: document.querySelector('.gallery__item'),
+  gallery: document.querySelector('.gallery')
 };
 
 console.log(galleryItems);
@@ -23,7 +22,7 @@ function onGalleryClick(event) {
   event.preventDefault();
   if (!event.target.classList.contains('gallery__image')) return;
 
-  const gallerySimplebox = new SimpleLightbox('.gallery a', {
+  const gallerySimplebox = new SimpleLightbox('.gallery__item', {
     captionsData: 'alt',
     captionPosition: 'bottom',
     captionDelay: 250,
